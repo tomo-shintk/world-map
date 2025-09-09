@@ -1,0 +1,14 @@
+.state {
+  fill: #4CAF50;
+  stroke: #333;
+  stroke-width: 0.3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.state:hover {
+  fill: #66bb6a;
+}
+.state:active {
+  transform: scale(0.97);
+  fill: #388e3c;
+}

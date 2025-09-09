@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>世界州マップ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>世界の州マップ（クリックでリンクへ）</h1>
+  <div id="map"></div>
+
+  <script>
+    fetch("world.svg")
+      .then(res => res.text())
+      .then(svgText => {
+        document.getElementById("map").innerHTML = svgText;
+        document.querySelectorAll("path").forEach(path => {
+          path.classList.add("state");
+          path.addEventListener("click", () => {
+            const stateId = path.id || "unknown";
+            window.open("https://example.com/state?name=" + stateId, "_blank");
+          });
+        });
+      });
+  </script>
+</body>
+</html>
