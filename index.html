@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>SVG World Map Demos</title>
-    </head>
-    <body>
-        <h1>SVG World Map Demos</h1>
-        <ul>
-            <li><b><a href="./demo/basics.html">Basics</a></b></li>
-            <li><b><a href="./demo/custom-options.html">Custom options</a></b></li>
-            <li><b><a href="./demo/custom-callbacks.html">Custom callbacks</a></b></li>
-            <li><b><a href="./demo/custom-data.html">Custom country data</a></b></li>
-            <li><b><a href="./demo/custom-shapes-images.html">Custom shapes & images</a></b> <sup>ᴢ</sup></li>
-            <li><b><a href="./demo/groups-callbacks-zoom.html">Groups, callbacks & zoom</a></b> <sup>ᴢ</sup></li>
-            <li><b><a href="./demo/time-animation.html">Time animation and controls</a></b> <sup>ᴛ ᴢ</sup></li>
-            <li><b><a href="./demo/wikipedia-data.html">Wikipedia table data projection</a></b></li>
-            <li><b><a href="./demo/wikipedia-data-animation.html">Wikipedia table data time animation</a></b> <sup>ᴛ</sup></li>
-            <li><b><a href="./demo/corona-world-map.html">COVID-19 Corona virus world map</a></b> <sup>ᴛ ᴢ ᴄ ᴀ</sup></li>
-        </ul><br>
-        <small>
-            <sup>ᴛ</sup> with <b>Time Controls</b><br>
-            <sup>ᴢ</sup> with <a href="https://github.com/ariutta/svg-pan-zoom" target="_blank">svg-pan-zoom.js</a><br>
-            <sup>ᴄ</sup> with <a href="https://www.chartjs.org" target="_blank">chart.js</a><br>
-            <sup>ᴀ</sup> data from the <a href="https://github.com/ExpDev07/coronavirus-tracker-api" target="_blank">Coronavirus Tracker API</a>
-        </small>
-    </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>州別マップサンプル</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    svg {
+      width: 800px;
+      height: 500px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    path {
+      fill: #ccc;
+      stroke: #000;
+      cursor: pointer;
+      transition: fill 0.3s;
+    }
+    path:hover {
+      fill: #f00;
+    }
+  </style>
+</head>
+<body>
+  <h1>州別マップ（サンプル）</h1>
+  <p>地図上の州をクリックすると、詳細ページへ移動します。</p>
+
+  <svg viewBox="0 0 1000 500">
+    <!-- カリフォルニア州 -->
+    <a xlink:href="california.html">
+      <path id="california" d="M50,50 L150,50 L150,150 L50,150 Z"/>
+    </a>
+    <!-- テキサス州 -->
+    <a xlink:href="texas.html">
+      <path id="texas" d="M200,200 L300,200 L300,300 L200,300 Z"/>
+    </a>
+    <!-- ニューヨーク州 -->
+    <a xlink:href="newyork.html">
+      <path id="newyork" d="M400,50 L500,50 L500,150 L400,150 Z"/>
+    </a>
+  </svg>
+</body>
 </html>
